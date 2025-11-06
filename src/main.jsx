@@ -1,11 +1,14 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.jsx";
-import "./styles/tailwind.css";
+// FILE: src/main.jsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import RouterApp from './Routes/Router.jsx'
+import './styles/tailwind.css'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterApp />
+    <ToastContainer position="top-right" autoClose={2000} newestOnTop />
+  </React.StrictMode>
+)
